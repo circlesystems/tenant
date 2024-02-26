@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/mediaquery.css">
+    <link rel="stylesheet" href="./assets/css/highcharts-white.css">
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap5.2.css">
+    <link rel="shortcut icon" href="./assets/images/navLogo.png" type="image/x-icon">
+    <title>Circle Access</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-main py-3">
+            <div class="container-fluid mainContainer bg-white flex-nowrap">
+
+                <div class="d-flex align-items-center">
+                    <div id="main">
+                        <span class="span-close-nav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                            aria-controls="offcanvasExample">
+                            <img class="togglerMenu" src="./assets/images/humburger-icon.png" alt="">
+                        </span>
+                    </div>
+                    <a href="./dashboard.html"> <img src="./assets/images/navLogo.png" alt="..."></a>
+                    <a href="./dashboard.html" class="navbar-brand ps-2 logo-content text-black semiBold">Circle
+                        Access</a>
+                </div>
+                <div class="input-group nav-search border rounded-3 d-lg-flex d-sm-none d-none">
+                    <span class="input-group-text bg-white border-0" id="basic-addon1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path
+                                d="M11.8164 10.6914H11.2239L11.0139 10.4889C11.7489 9.63391 12.1914 8.52391 12.1914 7.31641C12.1914 4.62391 10.0089 2.44141 7.31641 2.44141C4.62391 2.44141 2.44141 4.62391 2.44141 7.31641C2.44141 10.0089 4.62391 12.1914 7.31641 12.1914C8.52391 12.1914 9.63391 11.7489 10.4889 11.0139L10.6914 11.2239V11.8164L14.4414 15.5589L15.5589 14.4414L11.8164 10.6914ZM7.31641 10.6914C5.44891 10.6914 3.94141 9.18391 3.94141 7.31641C3.94141 5.44891 5.44891 3.94141 7.31641 3.94141C9.18391 3.94141 10.6914 5.44891 10.6914 7.31641C10.6914 9.18391 9.18391 10.6914 7.31641 10.6914Z"
+                                fill="#8D8D8D" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control border-0" placeholder="Search circle services"
+                        aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <!-- <div class="d-flex align-items-center ">
+                    <img src="./assets/images/man.png" alt="...">
+                    <a class="navbar-brand nav-profile fs-14 ps-2">Profile</a>
+                </div> -->
+                <!-- profile dropbutton -->
+
+                <div class="profile-dropdown">
+                    <div class="dropdown profile-menu position-relative" id="droppdwon">
+                        <button class="btn pf-dropdownBtn" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./assets/images/man.png" alt="...">
+                            <a class="navbar-brand nav-profile text-black fs-14 ps-3 medium">Profile</a>
+                        </button>
+                        <ul class="dropdown-menu drp-menu" aria-labelledby="dropdownMenuButton">
+
+                            <div class="p-3 pb-0">
+                                <div class="d-flex justify-content-between pf-name">
+                                    <div class="d-flex align-items-center m-auto">
+                                        <img src="./assets/images/man.png" alt="...">
+                                        <p class="medium mb-0 ps-2">Microsoft Tenant</p>
+                                    </div>
+                                    <div class="pf-name-div">
+                                        <input class=" pf-input mt-3 mt-lg-0" type="text"
+                                            placeholder="Manage Your Profile">
+                                    </div>
+                                </div>
+                                <div class="Pf-search-div-sidbar">
+
+                                    <div class="input-group  pf-sideBarSerach d-lg-flex d-sm-none d-none ">
+                                        <span
+                                            class="input-group-text bg-white border-0 pf-sideBarSerachIcon pf-input-padding"
+                                            id="basic-addon1 ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path
+                                                    d="M11.8164 10.6914H11.2239L11.0139 10.4889C11.7489 9.63391 12.1914 8.52391 12.1914 7.31641C12.1914 4.62391 10.0089 2.44141 7.31641 2.44141C4.62391 2.44141 2.44141 4.62391 2.44141 7.31641C2.44141 10.0089 4.62391 12.1914 7.31641 12.1914C8.52391 12.1914 9.63391 11.7489 10.4889 11.0139L10.6914 11.2239V11.8164L14.4414 15.5589L15.5589 14.4414L11.8164 10.6914ZM7.31641 10.6914C5.44891 10.6914 3.94141 9.18391 3.94141 7.31641C3.94141 5.44891 5.44891 3.94141 7.31641 3.94141C9.18391 3.94141 10.6914 5.44891 10.6914 7.31641C10.6914 9.18391 9.18391 10.6914 7.31641 10.6914Z"
+                                                    fill="#8D8D8D"></path>
+                                            </svg>
+                                        </span>
+                                        <input type="text"
+                                            class="form-control border-0 sideBarSerachInput pf-input-padding"
+                                            placeholder="Search circle services" aria-label="Username"
+                                            aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+                                <div class="pf-pagger">
+                                    <div class="pf-pagger-main d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <p class="mb-0 medium"><span class="textLight ">Showing </span> 1-5 of
+                                                100</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <button class="border-0 bg-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                    viewBox="0 0 25 24" fill="none">
+                                                    <path
+                                                        d="M18.335 3.86961L16.555 2.09961L6.66504 11.9996L16.565 21.8996L18.335 20.1296L10.205 11.9996L18.335 3.86961Z"
+                                                        fill="#D9D9D9" />
+                                                </svg>
+                                            </button>
+                                            <button class="ps-3 border-0 bg-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                    viewBox="0 0 25 24" fill="none">
+                                                    <path
+                                                        d="M6.61499 20.23L8.38499 22L18.385 12L8.38499 2L6.61499 3.77L14.845 12L6.61499 20.23Z"
+                                                        fill="black" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a class="cursor-poiner text-decoration-none" href="">
+                                <div
+                                    class="d-flex align-items-center justify-content-center pf-pagger-div pf-bg-primary">
+                                    <p class="medium pf-pagger mb-0 text-black  text-center">Microsoft Tenant</p>
+                                </div>
+                            </a>
+                            <a class="cursor-poiner text-decoration-none" href="">
+                                <div class="d-flex align-items-center justify-content-center pf-pagger-div">
+                                    <p class="medium pf-pagger mb-0  text-center textLight ">Google Tenant</p>
+                                </div>
+                            </a>
+                            <a class="cursor-poiner text-decoration-none" href="">
+                                <div class="d-flex align-items-center justify-content-center pf-pagger-div">
+                                    <p class="medium pf-pagger mb-0  text-center textLight ">Facebook Tenant</p>
+                                </div>
+                            </a>
+                            <a class="cursor-poiner text-decoration-none" href="">
+                                <div class="d-flex align-items-center justify-content-center pf-pagger-div">
+                                    <p class="medium pf-pagger mb-0  text-center textLight ">Test Tenant 001</p>
+                                </div>
+
+                            </a>
+
+                            <a class="cursor-poiner text-decoration-none" href="">
+                                <div class="d-flex align-items-center justify-content-center pf-pagger-div">
+                                    <p class="medium pf-pagger mb-0  text-center textLight ">Test Tenant 001</p>
+                                </div>
+                               </a> 
+                                <div class="dropdown-divider"></div>
+                                <a class="cursor-poiner text-decoration-none" href="">
+                                    <div
+                                        class="d-flex  align-items-center justify-content-center pf-pagger pf-pagger-div pf-logout-bg">
+                                        <img class="pb-lg-0  " src="./assets/images/logout.svg" alt="...">
+                                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-2 ps-2 medium pf-logout">
+                                            Logout</p>
+                                    </div>
+                                </a>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+
+        </nav>
+    </header>
+
+    <!----------- Side bar start  ------------>
+
+    <div class="offcanvas offcanvas-start sideBar" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header side-bar-header">
+
+        <button type="button" class="btn-close text-reset closebtn" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        <div class="d-flex justify-content-center align-items-center sideBarLogo">
+            <img src="./assets/images/navLogo.png" alt="...">
+            <a href="./dashboard.html" class="navbar-brand ps-2 logo-content semiBold">Circle Access</a>
+        </div>
+    </div>
+    <div class="offcanvas-body p-0">
+        <div class="search-div-sidbar">
+            <div class="input-group  sideBarSerach d-lg-flex d-sm-none d-none ">
+                <span class="input-group-text bg-white border-0 sideBarSerachIcon" id="basic-addon1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path
+                            d="M11.8164 10.6914H11.2239L11.0139 10.4889C11.7489 9.63391 12.1914 8.52391 12.1914 7.31641C12.1914 4.62391 10.0089 2.44141 7.31641 2.44141C4.62391 2.44141 2.44141 4.62391 2.44141 7.31641C2.44141 10.0089 4.62391 12.1914 7.31641 12.1914C8.52391 12.1914 9.63391 11.7489 10.4889 11.0139L10.6914 11.2239V11.8164L14.4414 15.5589L15.5589 14.4414L11.8164 10.6914ZM7.31641 10.6914C5.44891 10.6914 3.94141 9.18391 3.94141 7.31641C3.94141 5.44891 5.44891 3.94141 7.31641 3.94141C9.18391 3.94141 10.6914 5.44891 10.6914 7.31641C10.6914 9.18391 9.18391 10.6914 7.31641 10.6914Z"
+                            fill="#8D8D8D"></path>
+                    </svg>
+                </span>
+                <input type="text" class="form-control border-0 sideBarSerachInput"
+                    placeholder="Search circle services" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+
+        <ul class="sidebarList ps-0">
+            <li>
+                <a href="./administrator.html">
+                    <div class="d-flex  align-items-center ">
+                        <img class="pb-lg-0  " src="./assets/images/plus.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-2 medium ps-2">New Administrator
+                        </p>
+                    </div>
+
+                </a>
+            </li>
+            <li>
+                <a href="./configuration.html">
+                    <div class="d-flex  align-items-center ">
+                        <img class="pb-lg-0  " src="./assets/images/gear.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-2 ps-2 medium">Configuration</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="./emails.html">
+                    <div class="d-flex  align-items-center ">
+                        <img class="pb-lg-0  " src="./assets/images/envelope.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-2 ps-2 medium">Emails</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="./admin.html">
+                    <div class="d-flex  align-items-center ">
+                        <img class="pb-lg-0  " src="./assets/images/technologist.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-2 ps-2 medium">Admin Management</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="./microsoft.html">
+                    <div class="d-flex  align-items-center ">
+                        <img class="pb-lg-0  " src="./assets/images/Microsoft.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-2 ps-md-2 ps-sm-2 ps-2 medium">Microsoft Azure IDP</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="./samlidp.html">
+                    <div class="d-flex  align-items-center ">
+                        <img class="pb-lg-0  " src="./assets/images/qr-code.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-2 ps-2 medium">SAML IDP</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="sideBarLogout p-0">
+                <a class="d-flex border cursor-poiner align-items-center position-absolute bottom-0 justify-content-start logout_sidebar  start-0 w-100">
+                    <img class="pb-lg-0  " src="./assets/images/logout.svg" alt="...">
+                    <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-2 ps-2 medium text-center">Logout</p>
+                </a>
+        </div>
+    </div>
+</div>
+
+
+    <!----------- Side bar End  ------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="wrapper">
+        <div class="mainContainer py-3">
+            <div class="py-3">
+                <h3 class="fs-22 semiBold text-black">
+                    Circle services for Microsoft Tenant
+                </h3>
+            </div>
+            <div class="row flex-wrap align-items-center">
+                <a href="./administrator.html" class="col-lg-2 col-md-4 col-sm-6 col-6 text-decoration-none mb-3">
+                    <div
+                        class="d-flex flex-sm-column flex-lg-row flex-column align-items-center tt-cta-box bg-white w-100">
+                        <img class="pb-lg-0 pb-sm-2 pb-2" src="./assets/images/plus.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-0 ps-0 medium">New Administrator</p>
+                    </div>
+                </a>
+                <a href="./configuration.html" class="col-lg-2 col-md-4 col-sm-6 col-6 text-decoration-none mb-3 ">
+                    <div
+                        class="d-flex flex-sm-column flex-lg-row flex-column align-items-center tt-cta-box bg-white w-100">
+                        <img class="pb-lg-0 pb-sm-2 pb-2" src="./assets/images/gear.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-0 ps-0 medium">Configuration</p>
+                    </div>
+                </a>
+                <a href="./emails.html" class="col-lg-2 col-md-4 col-sm-6 col-6 text-decoration-none mb-3">
+                    <div
+                        class="d-flex flex-sm-column flex-lg-row flex-column align-items-center tt-cta-box bg-white w-100">
+                        <img class="pb-lg-0 pb-sm-2 pb-2" src="./assets/images/envelope.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-0 ps-0 medium">Emails</p>
+                    </div>
+                </a>
+
+                <a href="./admin.html" class="col-lg-2 col-md-4 col-sm-6 col-6 text-decoration-none mb-3">
+                    <div
+                        class="d-flex flex-sm-column flex-lg-row flex-column align-items-center tt-cta-box bg-white w-100">
+                        <img class="pb-lg-0 pb-sm-2 pb-2" src="./assets/images/technologist.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-0 ps-0 medium">Admin Management</p>
+                    </div>
+                </a>
+                <a href="./microsoft.html" class="col-lg-2 col-md-4 col-sm-6 col-6 text-decoration-none mb-3">
+                    <div
+                        class="d-flex flex-sm-column flex-lg-row flex-column align-items-center tt-cta-box bg-white w-100">
+                        <img class="pb-lg-0 pb-sm-2 pb-2" src="./assets/images/Microsoft.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-0 ps-0 medium">Microsoft
+                            Azure IDP</p>
+                    </div>
+                </a>
+                <a href="./samlidp.html" class="col-lg-2 col-md-4 col-sm-6 col-6 mb-3 text-decoration-none">
+                    <div
+                        class="d-flex flex-sm-column flex-lg-row flex-column align-items-center tt-cta-box bg-white w-100">
+                        <img class="pb-lg-0 pb-sm-2 pb-2" src="./assets/images/qr-code.png" alt="...">
+                        <p class="text-black fs-14 mb-0 ps-lg-3 ps-md-2 ps-sm-0 ps-0 medium">SAML IDP</p>
+                    </div>
+                </a>
+
+
+            </div>
+
+            <div
+                class="d-flex align-lg-items-center align-sm-items-start align-items-start tt-main-resource justify-content-between py-3">
+                <div class="">
+                    <h3 class="fs-22 text-black semiBold">
+                        Dashboard
+                    </h3>
+                    <p class="mb-0 py-2 fs-14 textLight regular">Check your Tenants stats and progress.</p>
+                </div>
+                <div class="d-flex align-items-center mt-lg-0 mt-sm-3 mt-3">
+                    <div class="pe-3">
+                        <p class="mb-0 fs-12 textLight regular">Last updated: </p>
+                        <p class="mb-0 fs-12 textLight regular">23:45 12/11/2023 </p>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path
+                                d="M23.5265 8.46634C21.5932 6.53301 18.9398 5.33301 15.9932 5.33301C10.0998 5.33301 5.33984 10.1063 5.33984 15.9997C5.33984 21.893 10.0998 26.6663 15.9932 26.6663C20.9665 26.6663 25.1132 23.2663 26.2998 18.6663H23.5265C22.4332 21.773 19.4732 23.9997 15.9932 23.9997C11.5798 23.9997 7.99318 20.413 7.99318 15.9997C7.99318 11.5863 11.5798 7.99967 15.9932 7.99967C18.2065 7.99967 20.1798 8.91967 21.6198 10.373L17.3265 14.6663H26.6598V5.33301L23.5265 8.46634Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-6 col-md-12">
+                    <div class="row flex-wrap align-items-center gap-0">
+                        <div class="col-lg-6 mb-3">
+                            <div class="tt-dev-resources bg-white">
+                                <p class="mb-0 textLight medium">Total Number of users</p>
+                                <h2 class="py-3 textDark semiBold">24 users</h2>
+                                <div class="d-flex align-items-end">
+                                    <p class="mb-0 pe-2 textlightGreen medium">+8.5%</p>
+                                    <img src="./assets/images/up.png" alt="">
+                                    <p class="mb-0 ps-2 textLight regular">increased in the last 24hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="tt-dev-resources bg-white">
+                                <p class="mb-0 textLight medium">Total active users</p>
+                                <h2 class="py-3 textDark semiBold">19 users</h2>
+                                <a href="./statistics.html" class="d-flex align-items-center text-decoration-none">
+                                    <p class="mb-0 pe-2 textlightGreen regular">Check out all users </p>
+                                    <img src="./assets/images/right.png" alt="...">
+
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tt-left-chart bg-white mt-2">
+                        <div class="d-flex justify-content-between pb-2">
+                            <p class="mb-0 fs-lg-16 fs-sm-14 fs-14 text-black medium">Login Activies </p>
+                            <p class="mb-0 fs-lg-16 fs-sm-14 fs-14 text-black medium">Login actions in the last 10 days
+                            </p>
+                        </div>
+                        <div class="card-body">
+                            <div id="chart1"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                        <div class="col-lg-7 mt-lg-0 mt-sm-3 mt-3">
+                            <div class="tt-left-chart bg-white">
+                                <div class="d-flex justify-content-between pb-2">
+                                    <p class="mb-0 fs-lg-16 fs-sm-14 fs-14 text-black medium">Login Activies </p>
+                                    <p class="mb-0 fs-lg-16 fs-sm-14 fs-14 text-black medium">Unique User Logins
+                                    </p>
+                                </div>
+                                <div class="h-100">
+                                    <div id="chart2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 mt-lg-0 mt-sm-3 mt-3">
+                            <div class="tt-dashboard-right">
+                                <div class="tt-resources-inner bg-white">
+                                    <p class="mb-0 text-black text-center medium fs-14">Newly added users</p>
+                                </div>
+                                <div class="tt-resources-inner bg-white">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 fs-14 textLight pe-2 medium">Added</p>
+                                        <img src="./assets/images/circle.png" alt="...">
+                                        <p class="mb-0 fs-14 textLight ps-2 medium">Frank@email.com</p>
+                                    </div>
+                                    <p class="mb-0 textLight medium fs-11 pt-1">Thus, Dec 21, 2023</p>
+                                </div>
+                                <div class="tt-resources-inner bg-white">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 fs-14 textLight pe-2 medium">Added</p>
+                                        <img src="./assets/images/circle.png" alt="...">
+                                        <p class="mb-0 fs-14 textLight ps-2 medium">Frank@email.com</p>
+                                    </div>
+                                    <p class="mb-0 textLight medium fs-11 pt-1">Thus, Dec 21, 2023</p>
+                                </div>
+                                <div class="tt-resources-inner bg-white">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 fs-14 textLight pe-2 medium">Added</p>
+                                        <img src="./assets/images/circle.png" alt="...">
+                                        <p class="mb-0 fs-14 textLight ps-2 medium">Frank@email.com</p>
+                                    </div>
+                                    <p class="mb-0 textLight medium fs-11 pt-1 ">Thus, Dec 21, 2023</p>
+                                </div>
+                                <div class="tt-resources-inner bg-white">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 fs-14 textLight pe-2 medium">Added</p>
+                                        <img src="./assets/images/circle.png" alt="...">
+                                        <p class="mb-0 fs-14 textLight ps-2 medium">Frank@email.com</p>
+                                    </div>
+                                    <p class="mb-0 textLight mediumfs-11 pt-1">Thus, Dec 21, 2023</p>
+                                </div>
+                                <div class="tt-resources-inner bg-white">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 fs-14 textLight pe-2 medium">Added</p>
+                                        <img src="./assets/images/circle.png" alt="...">
+                                        <p class="mb-0 fs-14 textLight ps-2 medium">Frank@email.com</p>
+                                    </div>
+                                    <p class="mb-0 textLight medium fs-11 pt-1">Thus, Dec 21, 2023</p>
+                                </div>
+                                <div class="tt-resources-inner bg-white">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 fs-14 textLight pe-2 medium">Added</p>
+                                        <img src="./assets/images/circle.png" alt="...">
+                                        <p class="mb-0 fs-14 textLight ps-2 medium">Frank@email.com</p>
+                                    </div>
+                                    <p class="mb-0 textLight medium fs-11 pt-1">Thus, Dec 21, 2023</p>
+                                </div>
+                                <div class="tt-resources-inner bg-white">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 fs-14 textLight pe-2 medium">Added</p>
+                                        <img src="./assets/images/circle.png" alt="...">
+                                        <p class="mb-0 fs-14 textLight ps-2 medium">Frank@email.com</p>
+                                    </div>
+                                    <p class="mb-0 textLight medium fs-11 pt-1">Thus, Dec 21, 2023</p>
+                                </div>
+                                <div class="tt-resources-inner bg-white">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 fs-14 textLight pe-2 regular">Added</p>
+                                        <img src="./assets/images/circle.png" alt="...">
+                                        <p class="mb-0 fs-14 textLight ps-2 medium">Frank@email.com</p>
+                                    </div>
+                                    <p class="mb-0 textLight medium fs-11 pt-1">Thus, Dec 21, 2023</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="bg-white p-3">
+            <div class="tt-footer-config w-100">
+                <p class="fs-14 mb-0 text-end medium textLight ">© 2023. Circle Systems, Inc. All rights reserved. -
+                    Privacy</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+<script src="./assets/chart-js/jquery.min.js"></script>
+<!-- <script src="./assets/chart-js/jquery-jvectormap-2.0.2.min.js"></script> -->
+<!-- <script src="./assets/chart-js/jquery-jvectormap-world-mill-en.js"></script> -->
+<script src="./assets/bootstrap/bootstrap5.2.js"></script>
+<script src="./assets/chart-js/apexcharts.min.js"></script>
+<script src="./assets/chart-js/highcharts.js"></script>
+
+<script>
+    $(function () {
+        "use strict";
+        var e = {
+            series: [{
+                name: "Sessions",
+                // data: [14, 3, 10, 9, 45, 19, 22, 9, 12, 7, 19, 5]
+                data: [10, 13, 55, 105, 12, 20, 110, 130, 9, 12, 70, 109]
+            }],
+            chart: {
+                foreColor: "#000",
+                height: 310,
+                type: "area",
+                zoom: {
+                    enabled: !1
+                },
+                toolbar: {
+                    show: !0
+                },
+                dropShadow: {
+                    enabled: !0,
+                    top: 3,
+                    left: 14,
+                    blur: 4,
+                    opacity: .1
+                }
+            },
+            stroke: {
+                width: 1,
+                curve: "smooth"
+            },
+            xaxis: {
+                type: "datetime",
+                categories: ["1/11/2000", "2/11/2000", "3/11/2000", "4/11/2000", "5/11/2000", "6/11/2000", "7/11/2000", "8/11/2000", "9/11/2000", "10/11/2000", "11/11/2000", "12/11/2000"]
+                // categories: ["29/11/2000", "30/11/2000", "1/12/2000", "2/12/2000", "3/12/2000", "4/12/2000", "5/12/2000", "6/12/2000", "7/12/2000", "8/11/2000", "9/11/2000", "10/12/2000"]
+
+            },
+            title: {
+                text: "",
+                align: "left",
+                style: {
+                    fontSize: "16px",
+                    color: "#fff"
+                }
+            },
+            fill: {
+                type: "gradient",
+                gradient: {
+                    shade: "light",
+                    gradientToColors: ["#41B8B6"],
+                    shadeIntensity: 1,
+                    type: "vertical",
+                    opacityFrom: .7,
+                    opacityTo: .2,
+                    stops: [0, 100, 100, 100]
+                }
+            },
+            markers: {
+                size: 0,
+                colors: ["#41B8B6"],
+                strokeColors: "#fff",
+                strokeWidth: 2,
+                hover: {
+                    size: 7
+                }
+            },
+            grid: {
+                borderColor: '#ECECEC',
+                show: true,
+            },
+            dataLabels: {
+                enabled: !1
+            },
+            tooltip: {
+                theme: "light",
+                fixed: {
+                    enabled: !1
+                },
+                x: {
+                    show: !0
+                },
+                y: {
+                    formatter: function (e) {
+                        return " " + e + " "
+                    }
+                },
+                marker: {
+                    show: !1
+                }
+            },
+            colors: ["#41B8B6"],
+            yaxis: {
+                title: {
+                    text: ""
+                }
+            }
+        };
+        new ApexCharts(document.querySelector("#chart1"), e).render();
+
+        var e = {
+            series: [{
+                name: "Sessions",
+                // data: [14, 3, 10, 9, 45, 19, 22, 9, 12, 7, 19, 5]
+                data: [10, 60, 70, 105, 120, 100, 110, 130, 109, 102, 70, 109]
+            }],
+            chart: {
+                foreColor: "#000",
+                height: 520,
+                type: "area",
+                zoom: {
+                    enabled: !1
+                },
+                toolbar: {
+                    show: !0
+                },
+                dropShadow: {
+                    enabled: !0,
+                    top: 3,
+                    left: 14,
+                    blur: 4,
+                    opacity: .1
+                }
+            },
+            stroke: {
+                width: 1,
+                curve: "smooth"
+            },
+            xaxis: {
+                type: "datetime",
+                categories: ["1/11/2000", "2/11/2000", "3/11/2000", "4/11/2000", "5/11/2000", "6/11/2000", "7/11/2000", "8/11/2000", "9/11/2000", "10/11/2000", "11/11/2000", "12/11/2000"]
+                // categories: ["29/11/2000", "30/11/2000", "1/12/2000", "2/12/2000", "3/12/2000", "4/12/2000", "5/12/2000", "6/12/2000", "7/12/2000", "8/11/2000", "9/11/2000", "10/12/2000"]
+
+            },
+
+            title: {
+                text: "",
+                align: "left",
+                style: {
+                    fontSize: "16px",
+                    color: "#fff"
+                }
+            },
+            fill: {
+                type: "gradient",
+                gradient: {
+                    shade: "light",
+                    gradientToColors: ["#41B8B6"],
+                    shadeIntensity: 1,
+                    type: "vertical",
+                    opacityFrom: .7,
+                    opacityTo: .2,
+                    stops: [0, 100, 100, 100]
+                }
+            },
+            markers: {
+                size: 0,
+                colors: ["#41B8B6"],
+                strokeColors: "#fff",
+                strokeWidth: 2,
+                hover: {
+                    size: 7
+                }
+            },
+            grid: {
+                borderColor: '#ECECEC',
+                show: true,
+            },
+            dataLabels: {
+                enabled: !1
+            },
+            tooltip: {
+                theme: "light",
+                fixed: {
+                    enabled: !1
+                },
+                x: {
+                    show: !0
+                },
+                y: {
+                    formatter: function (e) {
+                        return " " + e + " "
+                    }
+                },
+                marker: {
+                    show: !1
+                }
+            },
+            colors: ["#41B8B6"],
+            yaxis: {
+                title: {
+                    text: ""
+                }
+            }
+
+        };
+        new ApexCharts(document.querySelector("#chart2"), e).render();
+    });
+
+    const droppdwon = document.getElementById('droppdwon');
+
+    droppdwon.addEventListener('click', function (event) {
+        // Prevent the default behavior (e.g., following a link or submitting a form)
+        event.preventDefault();
+
+        // Stop the propagation of the click event
+        event.stopPropagation();
+
+        // Your custom logic here (if needed)
+    });
+</script>
+
+</html>

@@ -1,0 +1,165 @@
+Can u integrate all  above logic in this function <script>
+    // Import required components
+    const { Grid, Sort, Filter } = ej.grids;
+    const { DataManager, UrlAdaptor } = ej.data;
+
+    // Sample data
+    const userData = [
+    { userId: 'asdkadasdq123ds2ca', lastLoginDate: 'Thu, 30 Nov 2023 17:04:20 GMT', avgLoginPerDay: 0.05, pinPercent: 0, scanPercent: 100, userOnboardingDate: 'Mon, 01 Jan 0001 00:00:00 GMT', machineName: 'WINDOS231' },
+    // Add more data as needed
+];
+
+// Generate 40 dummy records
+for (let i = 1; i <= 6; i++) {
+    userData.push({
+        userId: 'user_' + i,
+        lastLoginDate: 'Thu, 30 Nov 2023 17:04:20 GMT',
+        avgLoginPerDay: Math.random() * 0.5, // Random value for demonstration
+        pinPercent: Math.floor(Math.random() * 101), // Random value between 0 and 100
+        scanPercent: Math.floor(Math.random() * 101), // Random value between 0 and 100
+        userOnboardingDate: 'Mon, 01 Jan 0001 00:00:00 GMT',
+        machineName: 'WINDOS' + Math.floor(Math.random() * 203)
+    });
+}
+
+
+    // Initialize the DataManager with the sample data
+    const dataManager = new DataManager(userData);
+    const grid = new Grid({
+        dataSource: dataManager,
+        allowSorting: true,
+        allowFiltering: false,
+        rowRenderingMode: 'Vertical',
+        enableAdaptiveUI: true,
+        allowPaging: false,
+        allowSorting: true,
+        allowFiltering: true,
+        allowPaging:true,
+        <!-- groupSettings: { showGroupedColumn: true }, -->
+        filterSettings: { type: 'Excel' },
+        editSettings: { allowAdding: false, allowEditing: false, allowDeleting: false, mode: 'Dialog' },
+        isResponsive: true,
+        isResponsive: true,
+        enableVirtualization: true,
+        loadingIndicator: { indicatorType: 'Shimmer' },
+        responsiveSettings: {
+            minDeviceWidth: 480,
+            noWrapMode: 'ShowHideColumns',
+            resizeMode: 'Fluid'
+        },
+        height: '100%',
+        toolbar: null,
+        columns: [
+            { 
+                field: 'userId', 
+                headerText: 'User ID', 
+                isPrimaryKey: true, 
+                allowFiltering: false,
+                customAttributes: { class: 'tablecol' },
+                width: '130'
+            },
+            { 
+                field: 'lastLoginDate', 
+                headerText: 'Last Login Date', 
+                allowFiltering: false,
+                customAttributes: { class: 'tablecol' },
+                width: '130'
+            },
+            { 
+                field: 'avgLoginPerDay', 
+                headerText: 'Avg Login / day', 
+                allowFiltering: false,
+                customAttributes: { class: 'tablecol' },
+                width: '130'
+            },
+            { 
+                field: 'pinPercent', 
+                headerText: 'Pin (%)', 
+                allowFiltering: false,
+                customAttributes: { class: 'tablecol' },
+                width: '130'
+            },
+            { 
+                field: 'scanPercent', 
+                headerText: 'Scan (%)', 
+                allowFiltering: false,
+                customAttributes: { class: 'tablecol' },
+                width: '130'
+            },
+            { 
+                field: 'userOnboardingDate', 
+                headerText: 'User Onboarding Date', 
+                allowFiltering: false,
+                customAttributes: { class: 'tablecol' },
+                width: '130'
+            },
+            { 
+                field: 'machineName', 
+                headerText: 'Machine Name', 
+                customAttributes: { class: 'tablecol' },
+                width: '130'
+            }
+        ]
+    });
+    
+ <!-- const currentPage =  grid?.pageSettings.currentPage()
+    const pageSize = grid.getPageSize();
+    const startIndex = (currentPage - 1) * pageSize + 1;
+    const endIndex = Math.min(currentPage * pageSize, grid.getDataCount());
+  
+    const template = grid.pager.querySelector('.custom-pager');
+    template.innerHTML = template.innerHTML
+      .replace('${startIndex}', startIndex)
+      .replace('${endIndex}', endIndex)
+      .replace('${totalPages}', grid.getDataCount());
+  
+    // Render the Grid
+    grid.appendTo('#grid');
+  
+    // Update pagination info on page change
+    grid.on('pageChange', () => {
+      const currentPage = grid.getCurrentPage();
+      const pageSize = grid.getPageSize();
+      const startIndex = (currentPage - 1) * pageSize + 1;
+      const endIndex = Math.min(currentPage * pageSize, grid.getDataCount());
+  
+      const template = grid.pager.querySelector('.custom-pager');
+      template.innerHTML = template.innerHTML
+        .replace('${startIndex}', startIndex)
+        .replace('${endIndex}', endIndex)
+        .replace('${totalPages}', grid.getDataCount());
+    }); -->
+    // Render the Grid
+    grid.appendTo('#grid');
+</script>
+
+// Calculate and update pagination info before rendering
+    const currentPage =  grid.pageSettings.currentPage
+
+    const pageSize = grid.getPageSize();
+    const startIndex = (currentPage - 1) * pageSize + 1;
+    const endIndex = Math.min(currentPage * pageSize, grid.getDataCount());
+  
+    const template = grid.pager.querySelector('.custom-pager');
+    template.innerHTML = template.innerHTML
+      .replace('${startIndex}', startIndex)
+      .replace('${endIndex}', endIndex)
+      .replace('${totalPages}', grid.getDataCount());
+  
+    // Render the Grid
+    grid.appendTo('#grid');
+  
+    // Update pagination info on page change
+    grid.on('pageChange', () => {
+      const currentPage = grid.pageSettings
+getCurrentPage();
+      const pageSize = grid.getPageSize();
+      const startIndex = (currentPage - 1) * pageSize + 1;
+      const endIndex = Math.min(currentPage * pageSize, grid.getDataCount());
+  
+      const template = grid.pager.querySelector('.custom-pager');
+      template.innerHTML = template.innerHTML
+        .replace('${startIndex}', startIndex)
+        .replace('${endIndex}', endIndex)
+        .replace('${totalPages}', grid.getDataCount());
+    });
