@@ -1,0 +1,420 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.cp_main {
+  padding: 30px 40px;
+  box-shadow: 0px 1.5px 3px 0px #00000024;
+  border-radius: 8px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.cp-row {
+  /* gap: 32px !important */
+  justify-content: space-between;
+  display: flex;
+}
+
+.cp_left {
+  gap: 42px;
+  flex: 0 0 53%;
+}
+
+.cp_right {
+  gap: 32px;
+  height: fit-content;
+  flex: 0 0 45%;
+
+}
+
+.font-weight-500 {
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.fs-22 {
+  font-size: 22px;
+}
+
+.border-light {
+  border-color: #D9D9D9 !important;
+}
+
+.custom_select {
+  padding: 10px 14px;
+  width: 100%;
+  border-radius: 5px;
+  color: #5F5F5F;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('/images/botom.png');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) center;
+  transition: background-position 0.3s;
+}
+
+.custom_select:focus {
+  outline: none;
+  background-position: calc(100% - 12px) center, center center;
+
+}
+
+.pass_sbtn {
+  padding: 14px 42px;
+  font-size: 16px;
+  font-weight: 500;
+  float: right;
+  border: 1px var(--primary-text--color) solid;
+  margin-top: 32px;
+  border-radius: 8px;
+  color: white;
+  background-color: var(--primary-text--color);
+}
+
+.pass_sbtn:hover {
+  border: 1px var(--primary-text--color) solid;
+  background-color: white;
+  color: var(--primary-text--color);
+}
+
+.pass_sbtn:disabled {
+  cursor: not-allowed;
+  color: #D9D9D9;
+}
+
+.plan {
+  font-size: 14px !important;
+  margin-top: calc(32px - 14px);
+}
+
+.bcb {
+  margin-bottom: 14px !important;
+}
+
+.tt-table-responsive {
+  margin-top: 14px !important;
+}
+
+.success_notice {
+  font-size: 12px;
+  color: rgb(156, 156, 156);
+  font-weight: 400;
+}
+
+.success_sub {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal_btn {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  background: #41B8B6;
+  padding: 12px 47px;
+  border-radius: 8px;
+  border: 1px #41B8B6 solid;
+}
+
+.modal_btn:hover {
+
+  border: 1px #41B8B6 solid;
+  padding: 12px 47px;
+  background-color: white;
+  color: #41B8B6 !important;
+}
+
+@media screen and (max-width: 1050px) {
+  .cp-row {
+    flex-direction: column;
+    grid-area: 30px;
+  }
+
+  .cp_left {
+    flex: 0 0 100%;
+  }
+
+  .cp_right {
+    flex: 0 0 100%;
+  }
+}
+
+.e-toolbar-item[title="Update"] .e-tbar-btn::after {
+  content: "Confirm";
+  font-size: 16px;
+  font-weight: 500;
+  background: #edf0f4;
+  color: #bbb3b3;
+  padding: 8px 14px;
+  border-radius: 7px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Transition for color and background-color */
+}
+
+.e-grid {
+  /* box-shadow: 0px 1.5px 3px 0px #00000024   */
+  box-shadow: none !important;
+}
+
+#GridOverview_toolbarItems {
+  padding-bottom: 14px;
+  border: none !important;
+  background-color: transparent;
+}
+
+.e-toolbar-items {
+  box-shadow: 0px 0px 2px 0px #0000001F;
+
+  box-shadow: 0px 2px 4px 0px #00000024;
+
+  padding: 5px 10px !important;
+  box-shadow: 0px 2px 4px 0px #00000024 !important;
+  height: auto !important;
+  align-items: center;
+  border-radius: 5px !important;
+
+}
+
+.e-gridcontent,
+.e-grid .e-table,
+.e-grid .e-pager,
+table {
+
+  box-shadow: 0px 2px 4px 0px #00000024 !important;
+
+}
+
+.e-grid.e-default tr td:first-child,
+.e-grid.e-default tr th.e-headercell:first-child:not(.e-firstcell):not(.e-headercell.e-frozen-left-border) {
+  border-left-width: 1px !important;
+
+}
+
+.e-grid.e-default tr td:last-child,
+.e-lastcell {
+  border-right-width: 1px !important;
+
+}
+
+.e-grid .e-headercontent {
+  overflow: auto;
+  /* border: 1px #D9D9D9 solid; */
+  box-shadow: 0px 2px 4px 0px #00000024 !important;
+  border-bottom: none I !important;
+}
+
+.e-grid .e-headercell {
+  background-color: #f2f2f2 !important;
+}
+
+#GridOverview_Refresh .e-tbar-btn-text::before {
+  content: "\e796";
+  font-family: e-icons;
+  font-size: 19px;
+  padding-right: 8px;
+}
+
+#GridOverview_Import .e-tbar-btn-text::before {
+  content: "";
+  background-position: center center;
+  background-image: url(/images/import.svg);
+  width: 21px;
+  height: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  transform: translate(-8px, 4px);
+}
+
+.e-grid .e-cancel::before,
+.e-grid-menu .e-cancel::before,
+.e-grid .e-update::before,
+.e-grid .e-add::before {
+  padding-right: 8px;
+}
+
+.e-toolbar {
+  display: block !important;
+}
+
+.e-submenu.e-menu-item::after,
+.e-submenu.e-menu-item.e-focused.e-selected::after {
+  content: "";
+  visibility: visible;
+  position: absolute;
+  left: 6px;
+}
+
+.e-input-group:not(.e-float-icon-left),
+.e-input-group.e-success:not(.e-float-icon-left),
+.e-input-group.e-warning:not(.e-float-icon-left),
+.e-input-group.e-error:not(.e-float-icon-left) {
+  border: 1px solid;
+  border-width: 1px !important;
+  width: 85%;
+  border-radius: 4px;
+}
+
+.e-input-group:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+.e-input-group.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+.e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+.e-input-group.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap,
+.e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left) {
+  border-color: gainsboro !important;
+}
+
+.e-checkbox-wrapper.e-checkbox-disabled .e-frame.e-check,
+.e-css.e-checkbox-wrapper.e-checkbox-disabled .e-frame.e-check,
+.e-checkbox-wrapper .e-frame.e-check,
+.e-css.e-checkbox-wrapper .e-frame.e-check {
+
+  background-color: #41b8b6 !important;
+  border-color: #41b8b6 !important;
+  color: #fff !important;
+}
+
+.breadcrumb>li+li:before {
+  content: "" !important;
+}
+
+.e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn.e-btn {
+  overflow: visible !important;
+}
+
+
+
+.e-toolbar-item[title="Update"] .e-tbar-btn .e-tbar-btn-text {
+  /* Hide the default "Update" text */
+  display: none;
+}
+
+.e-toolbar-item[title="Update"] .e-tbar-btn .e-btn-icon {
+  display: none;
+}
+
+
+
+.e-toolbar-item[aria-disabled="false"] .e-tbar-btn::after {
+  background-color: #41b8b6;
+  color: white;
+}
+
+.e-toolbar-items {
+  overflow: auto !important;
+}
+
+.e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn:hover,
+.e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn:focus,
+.e-btn.e-flat:hover,
+.e-btn.e-flat:focus {
+  background: transparent !important;
+  border-color: none !important;
+
+}
+
+.fade {
+  opacity: 0.9 !important;
+}
+
+@media screen and (min-width:600px) {
+  .e-toolbar-item[title="Update"] .e-tbar-btn::after {
+    content: "Confirm";
+    font-size: 16px;
+    font-weight: 500;
+    background: #edf0f4;
+    color: #bbb3b3;
+    padding: 8px 14px;
+    border-radius: 7px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .e-toolbar-item[title="Update"] .e-tbar-btn {
+    position: absolute !important;
+    right: 24px;
+  }
+
+  .e-toolbar-item[title="Update"] {
+    background-color: transparent !important;
+    position: absolute !important;
+    right: 24px;
+  }
+}
+
+@media screen and (max-width:600px) {
+
+  .e-toolbar .e-tbar-btn-text,
+  .e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn-text {
+
+    font-size: 12px;
+  }
+
+  .e-toolbar-item[aria-disabled="false"] .e-tbar-btn::after {
+
+    font-size: 12px;
+  }
+}
+
+.e-toolbar .e-toolbar-items .e-toolbar-item:not(.e-separator) {
+  min-width: fit-content !important;
+
+}
+
+@media screen and (max-width:500px) {
+  .cp-row {
+    padding: 0;
+  }
+
+  .cp_main {
+    padding: 20px;
+  }
+
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar div {
+    justify-content: space-between;
+  }
+
+  .e-toolbar-item[title="Update"] {
+
+    position: static !important;
+  }
+
+  .e-toolbar-item[title="Update"] .e-tbar-btn {
+    position: static !important;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .e-toolbar-items {
+    overflow: hidden !important;
+  }
+}

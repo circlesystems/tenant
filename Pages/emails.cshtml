@@ -1,0 +1,321 @@
+@page
+@model EmailsModel
+<link rel="stylesheet" href="~/css/datagrid.css" />
+<link rel="stylesheet" href="~/css/passport.css" asp-append-version="true" />
+
+@{
+ViewData["Title"] = "Users";
+}
+@using Syncfusion.EJ2
+@{
+List<object> commands = new List<object>();
+        commands.Add(new { type = "Edit", buttonOption = new { iconCss = "e-icons e-edit", cssClass = "e-flat" } });
+        commands.Add(new { type = "Delete", buttonOption = new { iconCss = "e-icons e-delete", cssClass = "e-flat" } });
+        commands.Add(new { type = "Save", buttonOption = new { iconCss = "e-icons e-update", cssClass = "e-flat" } });
+        commands.Add(new { type = "Cancel", buttonOption = new { iconCss = "e-icons e-cancel", cssClass = "e-flat" } });
+        }
+
+        @section ControlsSection {
+     
+        <div style="overflow: visible" class=" users_table_container  mt-lg-4 mt-sm-2 mt-2">
+            <section class="wrapper">
+
+                <div class="inner_wrapper">
+                    <div class="">
+                        <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                            <ol class="breadcrumb bcb d-flex align-items-center">
+                                <li class="breadcrumb-item"><a class="text-decoration-none textLight fs-12 medium"
+                                        href="./dashboard.html">Home</a></li>
+                                <li class="mx-2"><img src="~/images/forward.png" alt=""></li>
+                                <li class="breadcrumb-item active fs-12 medium pt-1" aria-current="page">Emails</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="font-weight-500 d-flex gap-3 mb-4 flex-nowrap align-items-center   fs-22">
+                        <img src="~/images/envelope.png" />
+                        <span>Emails</span>
+                    </div>
+                    <ejs-grid id="GridOverview" allowSorting="false" allowFiltering="false"
+                        dataSource="@Model.EmailList" toolbar="@(new List<string>() { " Add", "Refresh" , "Cancel"
+                        , "Import" ,"Update"})" toolbarClick="toolbarClick" allowPaging="true" rowHeight="72"
+                        enableHover="false" enableHeaderFocus="true" allowSelection="true">
+
+                        <e-grid-editSettings allowAdding="true" allowDeleting="true" allowEditing="true"
+                            newRowPosition="Top"></e-grid-editSettings>
+                        <e-grid-filterSettings type="Excel" enableInfiniteScrolling="true" loadingIndicator="Spinner"
+                            headerText="Customer,SSO Domain"></e-grid-filterSettings>
+                        <e-grid-pageSettings PageSize="9"></e-grid-pageSettings>
+                        <e-grid-columns>
+                            <e-grid-column field="UserName" headerText="User Name" textAlign="Center" width="200"
+                                validationRules='@new { required = true }'></e-grid-column>
+                            <e-grid-column allowFiltering="false" field="Email" headerText="Email" textAlign="Center"
+                                width="150" validationRules='@new { required = true }'></e-grid-column>
+                            <e-grid-column headerTemplate="#accessHeader" displayAsCheckBox="true" textAlign="Center"
+                                type="boolean" allowFiltering="false" editType="booleanedit" field="CircleAccess"
+                                headerText="Circle Data" textAlign="Center" width="150"
+                                validationRules='@new { required = true }'></e-grid-column>
+                            <e-grid-column editType="booleanedit" displayAsCheckBox="true" textAlign="Center"
+                                type="boolean" allowFiltering="false" field="CircleData" headerText="Circle Data"
+                                textAlign="Center" width="150" headerTemplate="#circleData"
+                                validationRules='@new { required = true }'></e-grid-column>
+                            <e-grid-column editType="booleanedit" displayAsCheckBox="true" textAlign="Center"
+                                type="boolean" allowFiltering="false" field="CirclePassport"
+                                headerText="Circle Passport" textAlign="Center" width="200"
+                                headerTemplate="#passportHeader"
+                                validationRules='@new { required = true }'></e-grid-column>
+                            <e-grid-commandcolumn width="200" headerText="Actions" textAlign="Center">
+                                <e-commands>
+                                    <e-grid-command-button type="CommandButtonType.Edit"></e-grid-command-button>
+                                    <e-grid-command-button type="CommandButtonType.Delete"></e-grid-command-button>
+                                </e-commands>
+                            </e-grid-commandcolumn>
+                            <e-grid-column headerText="Manage Records" width="150" commands="commands"></e-grid-column>
+                        </e-grid-columns>
+
+                    </ejs-grid>
+                </div>
+            </section>
+            <input type="file" id="fileInput" style="display: none;" onchange="handleFileUpload()">
+        </div>
+        }
+
+        <!-- Circle Access coloumn Header Template -->
+        <script id="accessHeader" type="text/x-template">
+            <div style="overflow: visible" class="d-flex align-items-center justify-content-center flex-nowrap border-0 gap-10 position-relative">
+                <input type="checkbox" id="headerCheck" onclick="UpdateAllRowCheckboxes"  onchange="UpdateAllRowCheckboxes" />
+                <span>Circle Access</span>
+                <div id="basic-addon2" flow="right" ttip="Enabling Circle Access for all users comes with the added cost.">
+                    <svg class="cursor-pointer info" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        </svg>
+                </div>
+            </div>
+            
+        </script>
+        
+        <script>
+            console.log("sdjkahsjka")
+            function UpdateAllRowCheckboxes(event) {
+                console.log("sdjkahsjka")
+                var checked = event.target.checked; // Get header checkbox state
+                var gridElement = document.querySelector('.e-grid');
+    
+                gridElement.querySelectorAll('.e-row').forEach(function(row) {
+                    var rowCheckbox = row.querySelector('input[type="checkbox"]');
+                    if (rowCheckbox) {
+                        rowCheckbox.checked = checked;
+                    }
+                });
+            }
+            window.onload = function() {
+                function UpdateAllRowCheckboxes(event) {
+                    var checked = event.target.checked; // Get header checkbox state
+                    var gridElement = document.querySelector('.e-grid');
+        
+                    gridElement.querySelectorAll('.e-row').forEach(function(row) {
+                        var rowCheckbox = row.querySelector('input[type="checkbox"]');
+                        if (rowCheckbox) {
+                            rowCheckbox.checked = checked;
+                        }
+                    });
+                }
+            };
+        </script>
+        
+        <!-- Circle Access coloumn Header Template -->
+        <!-- Circle Data coloumn Header Template -->
+        <script id="circleData" type="text/x-template">
+    <div style="" class="d-flex align-items-center justify-content-center flex-nowrap border-0 gap-10 position-relative">
+        <span>Circle Data</span>
+        <div id="basic-addon2" flow="right" ttip="Enabling Circle Data for all users comes with the added cost.">
+            <svg class="cursor-pointer info" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#5F5F5F"/>
+            </svg>
+        </div>
+    </div>
+</script>
+        <!-- Circle Data coloumn Header Template -->
+        <!-- Circle Passport coloumn Header Template -->
+
+        <script id="passportHeader" type="text/x-template">
+    <div style="" class="d-flex align-items-center justify-content-center flex-nowrap border-0 gap-10 position-relative">
+         <input type="checkbox" id="headerCheck" />
+        <span>Circle Passport</span>
+        <div id="basic-addon2" flow="right" ttip="Enabling Circle Passport for all users comes with the added cost.">
+            <svg class="cursor-pointer info" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#5F5F5F"/>
+            </svg>
+        </div>
+    </div>
+</script>
+        <!-- Circle Passport coloumn Header Template -->
+
+        <script>
+            const headerCheckbox = document.getElementById('headerCheck');
+console.log(headerCheckbox)
+            if(headerCheckbox)
+           { headerCheckbox.addEventListener('change', function(event) {
+                const checked = event.target.checked; // Get header checkbox state
+                const gridElement = document.querySelector('.e-grid');
+    
+                // Loop through rows and update individual checkboxes
+                gridElement.querySelectorAll('.e-row').forEach(function(row) {
+                    const rowCheckbox = row.querySelector('input[type="checkbox"]');
+                    if (rowCheckbox) {
+                        rowCheckbox.checked = checked;
+                    }
+                });
+            })}
+            function toolbarClick(args) {
+                if (args.item.properties.text === 'Import') {
+                    // Trigger file upload functionality
+                    document.getElementById('fileInput').click();
+                } else if (args.item.properties.text === 'Refresh') {
+                    var grid = document.getElementById('GridOverview').ej2_instances[0];
+                    location.reload();
+                    grid.refreshColumns();
+                }
+            }
+
+            function handleFileUpload() {
+                var fileInput = document.getElementById('fileInput');
+                var file = fileInput.files[0];
+                if (file.name.toLowerCase().endsWith('.csv')) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (event) {
+                        var csvData = event.target.result;
+                        var data = parseCSV(csvData);
+                        updateGrid(data);
+                    };
+
+                    reader.readAsText(file);
+                } else {
+
+                    alert('Please select a CSV file.');
+                }
+
+            }
+
+            function parseCSV(csvData) {
+                var lines = csvData.split('\n');
+                var result = [];
+
+                // Assuming the first row contains column headers
+                var headers = lines[0].split(',');
+
+                for (var i = 1; i < lines.length; i++) {
+                    var obj = {};
+                    var currentLine = lines[i].split(',');
+
+                    for (var j = 0; j < headers.length; j++) {
+                        // Convert 'true'/'false' to boolean if applicable
+                        var value = currentLine[j].trim();
+                        if (value.toLowerCase() === 'true') {
+                            obj[headers[j]] = true;
+                        } else if (value.toLowerCase() === 'false') {
+                            obj[headers[j]] = false;
+                        } else {
+                            obj[headers[j]] = currentLine[j];
+                        }
+                    }
+
+                    result.push(obj);
+                }
+
+                return result;
+            }
+
+
+            function updateGrid(data) {
+                var grid = document.getElementById('GridOverview').ej2_instances[0];
+                grid.dataSource = data;
+                grid.refresh();
+            }
+        </script>
+
+        <script type="text/javascript">
+            const grid= document.getElementById('GridOverview').ej2_instances[0];
+            grid.addEventListener("columnRender", function (e) {
+                alert("bitch")
+                if (e.detail.column.field === "CirclePassport") {
+                    var template = document.getElementById("passportHeader");
+                    var customElement = createCustomElementFromTemplate(template);
+                    e.detail.element.innerHTML = "";
+                    e.detail.element.appendChild(customElement);
+                    // Add event listeners to customElement's checkbox for row selection
+                }
+            });
+            
+            function createCustomElementFromTemplate(template) {
+                var fragment = document.createDocumentFragment();
+                template.content.cloneNode(true).appendChild(fragment);
+                var customElement = fragment.firstElementChild;
+                // ... initialize custom element based on template content
+                return customElement;
+            }
+            function onCreate(args) {
+                // Sets change event to the header checkbox.
+                $("#headerCheck").ejCheckBox({ "change": "headerChecked" });
+                console.log('1')
+            }
+            // Header checkbox changes function.
+            function headerChecked(args) {
+                checkAll(args.isChecked);
+                console.log('2')
+            }
+            // Grid actionComplete function.
+            function onActionComplete(args) {
+                console.log('3')
+                if (args.requestType == "paging") // Maintain the checked state while paging
+                    checkAll($("#headerCheck").ejCheckBox("model.checked"));
+            }
+            function checkAll(flag) {
+                console.log('4')
+                $(".check").prop("checked", flag); // Check or uncheck all content check boxes            
+            }
+        </script>
+
+        <!-- Using library for parsing imported file  -->
+        <!-- <script>
+    function toolbarClick(args) {
+        if (args.item.properties.text === 'Import') {
+            // Trigger file upload functionality
+            document.getElementById('fileInput').click();
+        } else if (args.item.properties.text === 'Refresh') {
+            var grid = document.getElementById('GridOverview').ej2_instances[0];
+            location.reload();
+            grid.refreshColumns();
+        }
+    }
+    function handleFileUpload() {
+        var fileInput = document.getElementById('fileInput');
+        var file = fileInput.files[0];
+    
+        if (file.name.toLowerCase().endsWith('.csv')) {
+            // Parse CSV file using Papa Parse
+            Papa.parse(file, {
+                header: true,
+                transform: function(value, header) {
+                    if (value.toLowerCase() === 'true') return true;
+                    else if (value.toLowerCase() === 'false') return false;
+                    else return value;
+                },
+                complete: function(results) {
+                    var data = results.data;
+                    updateGrid(data);
+                }
+            });
+        } else {
+            // Display an error message for unsupported file type
+            alert('Please select a CSV file.');
+        }
+    }
+    
+    function updateGrid(data) {
+        console.log(data)
+        var grid = document.getElementById('GridOverview').ej2_instances[0];
+        grid.dataSource = data;
+        grid.refresh();
+    }
+</script> -->
+        <!-- <script src="~/js/csvtojson.js"></script> -->

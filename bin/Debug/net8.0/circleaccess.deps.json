@@ -1,0 +1,75 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "circleaccess/1.0.0": {
+        "dependencies": {
+          "Syncfusion.EJ2.AspNet.Core": "24.2.7"
+        },
+        "runtime": {
+          "circleaccess.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.2": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.2.27524"
+          }
+        }
+      },
+      "Syncfusion.EJ2.AspNet.Core/24.2.7": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2",
+          "Syncfusion.Licensing": "24.2.7"
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.EJ2.dll": {
+            "assemblyVersion": "24.2.7.0",
+            "fileVersion": "24.2.7.0"
+          }
+        }
+      },
+      "Syncfusion.Licensing/24.2.7": {
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "24.2.7.0",
+            "fileVersion": "24.2.7.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "circleaccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
+      "path": "newtonsoft.json/13.0.2",
+      "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
+    },
+    "Syncfusion.EJ2.AspNet.Core/24.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j9nfl0YGwOFEzq24Z3FtxdY2GhKcuht2IDs1VxQadDS87vQk1YrqxCkW4G/YnXjdvdHGIChhsJFEbv7e5xc/8g==",
+      "path": "syncfusion.ej2.aspnet.core/24.2.7",
+      "hashPath": "syncfusion.ej2.aspnet.core.24.2.7.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/24.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1r6Dea99RxfKT4m1t2D8wNS7QA5NJf0wDUhy/vQUZkVuSA5+S7ZUNIaf14KVac5mbc9re+sg0xvKUS9909pVew==",
+      "path": "syncfusion.licensing/24.2.7",
+      "hashPath": "syncfusion.licensing.24.2.7.nupkg.sha512"
+    }
+  }
+}

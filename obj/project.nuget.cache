@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ODoBoPrxlZxwCSrIa9mYQLeoTrIl+4Gvtk9KacPT3N9fDXN1duCghrSDxJK8chkqs6ILl3O47XI4qDw/iFv3Bw==",
+  "success": true,
+  "projectFilePath": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\circleaccess.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\EWDtech Salman\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\EWDtech Salman\\.nuget\\packages\\syncfusion.ej2.aspnet.core\\24.2.7\\syncfusion.ej2.aspnet.core.24.2.7.nupkg.sha512",
+    "C:\\Users\\EWDtech Salman\\.nuget\\packages\\syncfusion.licensing\\24.2.7\\syncfusion.licensing.24.2.7.nupkg.sha512"
+  ],
+  "logs": []
+}

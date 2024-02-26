@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] </title>
+    <link rel="stylesheet" href="~/css/index.css" />
+    <link rel="stylesheet" href="~/bootstrap/bootstrap5.2.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/datagrid.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/highcharts-white.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/mediaquery.css" asp-append-version="true" />
+
+
+
+</head>
+
+<body style="background-color: #f6f8fb;">
+
+
+    <partial name="components/_Navbar" />
+
+    <div class="body_container">
+            <ejs-scripts></ejs-scripts>
+        @RenderSection("ControlsSection", false)
+        @RenderBody()
+
+    </div>
+
+
+    <footer>
+        <div>
+        </div>
+        <div class="p-3">
+            <div class="tt-footer-config w-100">
+                <p class="fs-14 mb-0 text-end medium textLight ">© 2023. Circle Systems, Inc. All rights reserved. -
+                    Privacy</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <ejs-scripts></ejs-scripts>
+</body>
+
+</html>

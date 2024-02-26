@@ -1,0 +1,621 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\circleaccess.bundle.scp.css",
+      "PackagePath": "staticwebassets\\circleaccess.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\bootstrap\\bootstrap5.2.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap5.2.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\bootstrap\\bootstrap5.2.js",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap5.2.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\chart-js\\apexcharts.min.js",
+      "PackagePath": "staticwebassets\\chart-js\\apexcharts.min.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\chart-js\\highcharts.js",
+      "PackagePath": "staticwebassets\\chart-js\\highcharts.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\chart-js\\highcharts.js.map",
+      "PackagePath": "staticwebassets\\chart-js\\highcharts.js.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\chart-js\\jquery-jvectormap-2.0.2.min.js",
+      "PackagePath": "staticwebassets\\chart-js\\jquery-jvectormap-2.0.2.min.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\chart-js\\jquery-jvectormap-world-mill-en.js",
+      "PackagePath": "staticwebassets\\chart-js\\jquery-jvectormap-world-mill-en.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\chart-js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\chart-js\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\css\\datagrid.css",
+      "PackagePath": "staticwebassets\\css\\datagrid.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\css\\highcharts-white.css",
+      "PackagePath": "staticwebassets\\css\\highcharts-white.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\css\\mediaquery.css",
+      "PackagePath": "staticwebassets\\css\\mediaquery.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\css\\passport.css",
+      "PackagePath": "staticwebassets\\css\\passport.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\css\\users.css",
+      "PackagePath": "staticwebassets\\css\\users.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\fonts\\OpenSans-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\OpenSans-Bold.ttf"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\fonts\\OpenSans-Medium.ttf",
+      "PackagePath": "staticwebassets\\fonts\\OpenSans-Medium.ttf"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\fonts\\OpenSans-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\OpenSans-Regular.ttf"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\fonts\\OpenSans-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\OpenSans-SemiBold.ttf"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\fonts\\icon-fonts",
+      "PackagePath": "staticwebassets\\fonts"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\fonts\\icon-fonts.ttf",
+      "PackagePath": "staticwebassets\\fonts\\icon-fonts.ttf"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\fonts\\icons.ttf",
+      "PackagePath": "staticwebassets\\fonts\\icons.ttf"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\icons\\filter.svg",
+      "PackagePath": "staticwebassets\\icons\\filter.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\icons\\microns.css",
+      "PackagePath": "staticwebassets\\icons\\microns.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\icons\\microns.otf",
+      "PackagePath": "staticwebassets\\icons\\microns.otf"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\icons\\microns.scss",
+      "PackagePath": "staticwebassets\\icons\\microns.scss"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\icons\\microns.svg",
+      "PackagePath": "staticwebassets\\icons\\microns.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\icons\\microns.ttf",
+      "PackagePath": "staticwebassets\\icons\\microns.ttf"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\icons\\microns.woff",
+      "PackagePath": "staticwebassets\\icons\\microns.woff"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\icons\\microns.woff2",
+      "PackagePath": "staticwebassets\\icons\\microns.woff2"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\icons\\preview.svg",
+      "PackagePath": "staticwebassets\\icons\\preview.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\Background.png",
+      "PackagePath": "staticwebassets\\images\\Background.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\Group.svg",
+      "PackagePath": "staticwebassets\\images\\Group.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\Icons.png",
+      "PackagePath": "staticwebassets\\images\\Icons.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\Icons1.png",
+      "PackagePath": "staticwebassets\\images\\Icons1.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\Layer 2.png",
+      "PackagePath": "staticwebassets\\images\\Layer 2.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\Login.png",
+      "PackagePath": "staticwebassets\\images\\Login.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\Logo (1).png",
+      "PackagePath": "staticwebassets\\images\\Logo (1).png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\Logo.png",
+      "PackagePath": "staticwebassets\\images\\Logo.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\Microsoft.png",
+      "PackagePath": "staticwebassets\\images\\Microsoft.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\apple.svg",
+      "PackagePath": "staticwebassets\\images\\apple.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\arrow_circle_right.png",
+      "PackagePath": "staticwebassets\\images\\arrow_circle_right.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\arrow_forward.png",
+      "PackagePath": "staticwebassets\\images\\arrow_forward.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\arrowbtn.png",
+      "PackagePath": "staticwebassets\\images\\arrowbtn.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\backarrow.png",
+      "PackagePath": "staticwebassets\\images\\backarrow.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\badge-apple-en 1.png",
+      "PackagePath": "staticwebassets\\images\\badge-apple-en 1.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\botom.png",
+      "PackagePath": "staticwebassets\\images\\botom.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\btnLeft.png",
+      "PackagePath": "staticwebassets\\images\\btnLeft.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\btnRight.png",
+      "PackagePath": "staticwebassets\\images\\btnRight.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\c_logo.svg",
+      "PackagePath": "staticwebassets\\images\\c_logo.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\circle.png",
+      "PackagePath": "staticwebassets\\images\\circle.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\circlelogo.png",
+      "PackagePath": "staticwebassets\\images\\circlelogo.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\clr-filter.png",
+      "PackagePath": "staticwebassets\\images\\clr-filter.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\copy.png",
+      "PackagePath": "staticwebassets\\images\\copy.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\cross.png",
+      "PackagePath": "staticwebassets\\images\\cross.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\delete.png",
+      "PackagePath": "staticwebassets\\images\\delete.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\documentfile.png",
+      "PackagePath": "staticwebassets\\images\\documentfile.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\downarrow.png",
+      "PackagePath": "staticwebassets\\images\\downarrow.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\download.svg",
+      "PackagePath": "staticwebassets\\images\\download.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\edit.png",
+      "PackagePath": "staticwebassets\\images\\edit.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\envelope.png",
+      "PackagePath": "staticwebassets\\images\\envelope.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\filter.png",
+      "PackagePath": "staticwebassets\\images\\filter.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\forward.png",
+      "PackagePath": "staticwebassets\\images\\forward.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\gear.png",
+      "PackagePath": "staticwebassets\\images\\gear.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\google-play.png",
+      "PackagePath": "staticwebassets\\images\\google-play.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\humburger-icon.png",
+      "PackagePath": "staticwebassets\\images\\humburger-icon.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\import.svg",
+      "PackagePath": "staticwebassets\\images\\import.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\info.svg",
+      "PackagePath": "staticwebassets\\images\\info.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\logout.svg",
+      "PackagePath": "staticwebassets\\images\\logout.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\man.png",
+      "PackagePath": "staticwebassets\\images\\man.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\navLogo.png",
+      "PackagePath": "staticwebassets\\images\\navLogo.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\nocompromise.svg",
+      "PackagePath": "staticwebassets\\images\\nocompromise.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\office.png",
+      "PackagePath": "staticwebassets\\images\\office.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\phone.png",
+      "PackagePath": "staticwebassets\\images\\phone.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\play.svg",
+      "PackagePath": "staticwebassets\\images\\play.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\play_store.svg",
+      "PackagePath": "staticwebassets\\images\\play_store.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\plus.png",
+      "PackagePath": "staticwebassets\\images\\plus.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\qr-code.png",
+      "PackagePath": "staticwebassets\\images\\qr-code.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\qr_code.png",
+      "PackagePath": "staticwebassets\\images\\qr_code.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\right.png",
+      "PackagePath": "staticwebassets\\images\\right.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\robot.png",
+      "PackagePath": "staticwebassets\\images\\robot.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\scan.png",
+      "PackagePath": "staticwebassets\\images\\scan.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\technologist.png",
+      "PackagePath": "staticwebassets\\images\\technologist.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\thinking.gif",
+      "PackagePath": "staticwebassets\\images\\thinking.gif"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\top.png",
+      "PackagePath": "staticwebassets\\images\\top.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\up.png",
+      "PackagePath": "staticwebassets\\images\\up.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\user.png",
+      "PackagePath": "staticwebassets\\images\\user.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\watch.png",
+      "PackagePath": "staticwebassets\\images\\watch.png"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\images\\word.svg",
+      "PackagePath": "staticwebassets\\images\\word.svg"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\js\\csvtojson.js",
+      "PackagePath": "staticwebassets\\js\\csvtojson.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\circle.Net\\gitnetcircleaccess\\tenant\\wwwroot\\lib\\syncfusion\\ej2.min.js",
+      "PackagePath": "staticwebassets\\lib\\syncfusion\\ej2.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.circleaccess.props",
+      "PackagePath": "build\\circleaccess.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.circleaccess.props",
+      "PackagePath": "buildMultiTargeting\\circleaccess.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.circleaccess.props",
+      "PackagePath": "buildTransitive\\circleaccess.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.circleaccess.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

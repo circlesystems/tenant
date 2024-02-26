@@ -1,0 +1,144 @@
+﻿@page
+@model IndexModel
+
+<link rel="stylesheet" href="~/css/datagrid.css" />
+<link rel="stylesheet" href="~/css/users.css" />
+
+
+@{
+    ViewData["Title"] = "Users";
+}
+@{
+    var myusers = Model.Users;
+}
+@using Syncfusion.EJ2
+
+@section ControlsSection {
+    
+    <div style="overflow: visible" class="mt-lg-4 mt-sm-2 mt-2">
+        <section class="wrapper">
+            <div class="inner_wrapper">
+                <ejs-grid  id="GridOverview"  allowSorting="true" allowFiltering="true" dataSource="@Model.Users" allowPaging="true" rowHeight="72" enableHover="false" enableHeaderFocus="true"  allowSelection="true" >
+                <e-grid-filterSettings type="Excel" enableInfiniteScrolling="true" loadingIndicator="Spinner" headerText="Customer,Windows,SAML,Azure,Admins,SSO Domain"></e-grid-filterSettings>
+                      <e-grid-pageSettings PageSize="9"></e-grid-pageSettings>
+                    <e-grid-columns>
+                        <e-grid-column field="Customer" headerText="Customer" textAlign="Center"
+                            width="200"   ></e-grid-column>
+                        <e-grid-column allowFiltering="false" field="Windows" headerText="Windows" textAlign="Center" width="150"
+                            headerTemplate="#windowsHeader"></e-grid-column>
+                        <e-grid-column  allowFiltering="false" field="Saml" headerText="SAML" textAlign="Center" width="150"
+                            headerTemplate="#samlHeader"></e-grid-column>
+                        <e-grid-column  allowFiltering="false" field="Azure" headerText="Azure" textAlign="Center" width="150"
+                            headerTemplate="#azureHeader"></e-grid-column>
+                        <e-grid-column  allowFiltering="false" field="Admin" headerText="Admins" textAlign="Center" width="200"
+                            headerTemplate="#adminsHeader"></e-grid-column>
+                    <e-grid-column  allowFiltering="false" field="CreatedDate" headerText="Created Date" textAlign="Center" width="200" format="dd MMM yyyy"></e-grid-column>
+
+                        <e-grid-column  allowFiltering="true" field="SsoDomain" headerText="SSO Domain" textAlign="Center"
+                            width="200"></e-grid-column>
+
+                    </e-grid-columns>
+                </ejs-grid>
+            </div>
+        </section>
+    </div>
+}
+<script id="windowsHeader" type="text/x-template">
+    <div style="overflow: visible" class="d-flex align-items-center justify-content-center flex-nowrap border-0 gap-10 position-relative">
+        <div id="basic-addon2" flow="right" ttip="Number of windows systems registered with circle">
+            <svg class="cursor-pointer info" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#5F5F5F"/>
+            </svg>
+        </div>
+        <span>Windows</span>
+    </div>
+</script>
+
+<script id="samlHeader" type="text/x-template">
+    <div style="" class="d-flex align-items-center justify-content-center flex-nowrap border-0 gap-10 position-relative">
+        <div id="basic-addon2" flow="right" ttip="Number of Security Assertion Markup Language (SAML) registered with circle">
+            <svg class="cursor-pointer info" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#5F5F5F"/>
+            </svg>
+        </div>
+        <span>SAML</span>
+    </div>
+</script>
+
+<script id="azureHeader" type="text/x-template">
+    <div style="" class="d-flex align-items-center justify-content-center flex-nowrap border-0 gap-10 position-relative">
+        <div id="basic-addon2" flow="right" ttip="Number of Azure systems registered with circle">
+            <svg class="cursor-pointer info" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#5F5F5F"/>
+            </svg>
+        </div>
+        <span>Azure</span>
+    </div>
+</script>
+<script type="text/javascript">
+    function onBeforeOpen(args) {
+        var filterDialog = args.filterModel.dialogObj.element;
+        var clearButton = filterDialog.querySelector('.e-excel-ascending ');
+        console.log (clearButton)
+        if (clearButton) {
+            clearButton.style.display = 'e-excel-ascending ';
+        }
+
+    }
+</script>
+
+<script id="adminsHeader" type="text/x-template">
+    <div style="" class="d-flex align-items-center justify-content-center flex-nowrap border-0 gap-10 position-relative">
+        <div id="basic-addon2" flow="right" ttip="Number of Admin Users registered with circle">
+            <svg class="cursor-pointer info" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#5F5F5F"/>
+            </svg>
+        </div>
+        <span>Admins</span>
+    </div>
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const thElements = document.querySelectorAll("th");
+        const applyCssToAfter = (innerText) => {
+            const style = document.querySelector('style');
+            if (!style) {
+                console.error("No existing <style> tag found in the document head.");
+                return;
+            }
+        
+            // Check if the content already exists for the class
+            const existingContent = style.textContent;
+            const classSelector = ".e-submenu.e-menu-item::after, .e-submenu.e-menu-item.e-focused.e-selected::after";
+            const contentIndex = existingContent.indexOf(classSelector);
+            if (contentIndex !== -1) {
+                // If content exists, remove it
+                const endIndex = existingContent.indexOf("}", contentIndex) + 1;
+                const newContent = existingContent.slice(0, contentIndex) + existingContent.slice(endIndex);
+                style.textContent = newContent;
+            }
+        
+            // Add new content
+            style.textContent += `
+                ${classSelector} {
+                    content: "${innerText}" !important;
+                    visibility: visible;
+                    position: absolute;
+                    left: 6px;
+                }
+            `;
+        };
+        
+          
+        thElements.forEach(function(th) {
+            th.addEventListener("click", function() {
+                
+                if (th.classList.contains("e-fltr-icon")) {
+            applyCssToAfter(th.innerText);
+                }
+            });
+        });
+    });
+</script>
+

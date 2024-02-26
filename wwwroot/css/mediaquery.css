@@ -1,0 +1,342 @@
+@media screen and (min-width:1400px) and (max-width: 1550px) {
+    .tt-dev-resources h2 {
+        font-size: 42px;
+    }
+}
+
+@media screen and (min-width:1025px) and (max-width: 1400px) {
+    .tt-cta-box {
+        padding: 40px 10px;
+    }
+
+    .mainContainer {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+
+    .tt-cta-box p {
+        font-size: 12px;
+    }
+
+    .tt-dev-resources h2 {
+        font-size: 36px;
+    }
+
+    .tt-dev-resources {
+        padding: 20px;
+    }
+
+    .tt-resources-inner {
+        padding: 14px 10px;
+    }
+    .inner_wrapper{ 
+      padding-left: 20px !important;
+        padding-right: 20px !important;
+
+    }
+  
+}
+@media screen and (min-width:480px) and (max-width: 768px){
+    #offcanvasRight {
+        width: 400px !important;
+    }
+}
+@media screen and (min-width:768px) and (max-width: 1025px) {
+    .mainContainer {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .tt-resources-inner {
+        padding: 14px 10px;
+    }
+    .inner_wrapper{ 
+        padding-left: 10px !important;
+          padding-right:10px !important;
+  
+      }
+    .tt-cta-box {
+        width: 50%;
+        gap: 10px;
+    }
+
+    .tt-dev-resources {
+        padding: 20px;
+    }
+
+    .tt-dev-resources h2 {
+        font-size: 38px;
+    }
+
+    .tt-cta-box p {
+        font-size: 12px;
+    }
+
+    .tt-cta-box {
+        padding: 20px 10px;
+    }
+
+    .tt-footer-config {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tt-config-footer {
+        justify-content: center !important;
+        align-items: center;
+    }
+    #offcanvasRight {
+        width: 400px !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .inner_wrapper{ 
+        padding-left:10px !important;
+          padding-right: 10px !important;
+  
+      }
+    .tt-cta-box {
+        width: 100%;
+        padding: 20px 20px;
+        justify-content: center;
+    }
+    .login-buton-bg {
+        width: auto;
+      }
+      .banner-height{
+       padding: 0 15px;
+      }
+      .admin-box-main {
+        width: 100% !important;
+      }
+    .tt-cta-box p {
+        text-align: center;
+    }
+    .admin-box-padding {
+        padding: 40px 20px;
+    }
+    .mainContainer {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .tt-dev-resources h2 {
+        font-size: 32px;
+    }
+
+    .tt-main-resource {
+        flex-direction: column;
+    }
+
+    .tt-left-chart {
+        padding: 12px;
+    }
+
+    .logo-content {
+        font-size: 20px !important;
+    }
+
+    #apexcharts09022qao {
+        height: 300px !important;
+    }
+
+    #chart2 {
+        min-height: 300px !important;
+    }
+    .subscribe-btn {
+        padding: 14px 20px;
+    }
+    .banner-height {
+        height: 100%;
+    }
+    .login-bg{
+        height: auto;
+    }
+    .login-bg  .copyright-p{
+padding: 30px 15px;
+    }
+    .notenants-box-main {
+        width: 100%;
+    }
+    
+}
+@media screen and (min-width:992px) {
+    .tt-admin-table th {
+        width: 25%;
+    }
+
+    .tt-table-responsive {
+        overflow-x: visible !important;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .tt-config-setting .form-check {
+        margin-left: 12px !important;
+    }
+
+    .tt-config-setting1 .form-check {
+        margin-left: 12px !important;
+    }
+
+    .tt-config-setting .form-check .form-check-label {
+        font-size: 13px !important;
+    }
+
+    .tt-config-setting1 .form-check .form-check-label {
+        font-size: 13px !important;
+    }
+
+    .mainContainer1 {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+    .tt-admin-canvasInner {
+        padding: 22px;
+}
+}
+@media screen and (max-width:768px) {
+    .tt-config-footer1 {
+        justify-content: center;
+    }
+
+    .tt-config-foote1r {
+        justify-content: center;
+    }
+
+    .tt-admin-tableInner {
+        width: 100% !important;
+    }
+
+    .tt-admin-table th,
+    .tt-admin-table td {
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width:480px) {
+    #offcanvasRight {
+        width: 100% !important;
+    }
+}
+@media screen and (max-width:395px){
+.tt-canvas-inner{
+    flex-wrap: wrap;
+}
+.tt-canvas-inner button{
+    width: 100% !important;
+    margin-top: 10px;
+}
+.tt-canvas-top {
+    height: 75%;
+}
+}
+@media screen and (max-width:768px) {
+    .admini-main {
+        padding: 20px 20px;
+    }
+  }
+  
+@media (max-width:767px) {
+    .search-div-sidbar {
+        padding: 0;
+    }
+
+    .togglerMenu {
+        padding: 10px;
+    }
+}
+@media (max-width: 767px) {
+    .drp-menu {
+        width: 300px;
+    }
+
+    .pf-name {
+        flex-wrap: wrap;
+    }
+
+    .pf-name-div {
+        width: 100%;
+    }
+
+    .pf-name-div input {
+        width: 100%;
+    }
+
+}
+@media screen and (max-width:768px) {
+    
+    .padd-32 {
+padding: 20px;
+}
+.mobjustify {
+justify-content: start !important;
+}
+}
+    @media screen and (max-width:990px) {
+
+.mobjustify {
+justify-content: start !important;
+}
+}
+@media screen and (min-width:991px) and (max-width:1100px) {
+
+.copyimg-heightmob {
+padding: 5px !important;
+}
+.logomobwidth{
+width:100px !important;
+}
+
+}
+@media screen and (min-width:1101px) and (max-width:1310px) {
+
+.copyimg-heightmob {
+padding: 5px !important;
+}
+.logomobwidth{
+width:150px !important;
+}
+
+}
+@media screen and (max-width:768px) {
+
+    .padd-32 {
+        padding: 20px;
+    }
+
+    .mobjustify {
+        justify-content: start !important;
+    }
+}
+
+@media screen and (max-width:990px) {
+
+    .mobjustify {
+        justify-content: start !important;
+    }
+}
+
+@media screen and (min-width:991px) and (max-width:1100px) {
+
+    .copyimg-heightmob {
+        padding: 5px !important;
+    }
+
+    .logomobwidth {
+        width: 100px !important;
+    }
+
+}
+
+@media screen and (min-width:1101px) and (max-width:1310px) {
+
+    .copyimg-heightmob {
+        padding: 5px !important;
+    }
+
+    .logomobwidth {
+        width: 150px !important;
+    }
+
+}
