@@ -2,7 +2,6 @@
 @model EmailsModel
 <link rel="stylesheet" href="~/css/datagrid.css" />
 <link rel="stylesheet" href="~/css/passport.css" asp-append-version="true" />
-
 @{
 ViewData["Title"] = "Users";
 }
@@ -16,7 +15,7 @@ List<object> commands = new List<object>();
         }
 
         @section ControlsSection {
-     
+
         <div style="overflow: visible" class=" users_table_container  mt-lg-4 mt-sm-2 mt-2">
             <section class="wrapper">
 
@@ -46,23 +45,20 @@ List<object> commands = new List<object>();
                             headerText="Customer,SSO Domain"></e-grid-filterSettings>
                         <e-grid-pageSettings PageSize="9"></e-grid-pageSettings>
                         <e-grid-columns>
-                            <e-grid-column field="UserName" headerText="User Name" textAlign="Center" width="200"
-                                validationRules='@new { required = true }'></e-grid-column>
-                            <e-grid-column allowFiltering="false" field="Email" headerText="Email" textAlign="Center"
-                                width="150" validationRules='@new { required = true }'></e-grid-column>
+                            <e-grid-column validationRules='@new { required = true }' field="UserName"
+                                headerText="User Name" textAlign="Center" width="200"></e-grid-column>
+                            <e-grid-column validationRules='@new { required = true }' allowFiltering="false"
+                                field="Email" headerText="Email" textAlign="Center" width="150"></e-grid-column>
                             <e-grid-column headerTemplate="#accessHeader" displayAsCheckBox="true" textAlign="Center"
                                 type="boolean" allowFiltering="false" editType="booleanedit" field="CircleAccess"
-                                headerText="Circle Data" textAlign="Center" width="150"
-                                validationRules='@new { required = true }'></e-grid-column>
+                                headerText="Circle Access" textAlign="Center" width="200"></e-grid-column>
                             <e-grid-column editType="booleanedit" displayAsCheckBox="true" textAlign="Center"
                                 type="boolean" allowFiltering="false" field="CircleData" headerText="Circle Data"
-                                textAlign="Center" width="150" headerTemplate="#circleData"
-                                validationRules='@new { required = true }'></e-grid-column>
+                                textAlign="Center" width="200" headerTemplate="#circleData"></e-grid-column>
                             <e-grid-column editType="booleanedit" displayAsCheckBox="true" textAlign="Center"
                                 type="boolean" allowFiltering="false" field="CirclePassport"
                                 headerText="Circle Passport" textAlign="Center" width="200"
-                                headerTemplate="#passportHeader"
-                                validationRules='@new { required = true }'></e-grid-column>
+                                headerTemplate="#passportHeader"></e-grid-column>
                             <e-grid-commandcolumn width="200" headerText="Actions" textAlign="Center">
                                 <e-commands>
                                     <e-grid-command-button type="CommandButtonType.Edit"></e-grid-command-button>
@@ -76,55 +72,110 @@ List<object> commands = new List<object>();
                 </div>
             </section>
             <input type="file" id="fileInput" style="display: none;" onchange="handleFileUpload()">
+            <!-- alert for accesss -->
+            <div class="modal fade" id="alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border-bottom: none;">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center mb-1">
+                            <h5 class="mt-1 fs-22 font-weight-500">Enable circle Access to all</h5>
+                            <p class="mt-1 mb-2 success_notice">Are you sure you want to enable Circle Access to All
+                                users</p>
+                            <div class="text-center mb-2  mt-3  justify-content-around  flex-nowrap">
+                                <button class="modal_btn flex-grow-1"
+                                    onclick="attachEventListeners('Circle Access', true)"
+                                    id="cancel_model_Circle_Access">No, Don't</button>
+                                <button class="modal_btn flex-grow-1"
+                                    onclick="attachEventListeners('Circle Access')">Enable for all</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         }
+        <!-- alert for accesss -->
+        <div class="modal fade" id="alert2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center mb-1">
+                        <h5 class="mt-1 fs-22 font-weight-500">Enable Circle Data to all</h5>
+                        <p class="mt-1 mb-2 success_notice">Are you sure you want to enable Circle Data to All
+                            users</p>
+                        <div class="text-center mb-2  mt-3  justify-content-around  flex-nowrap">
+                            <button class="modal_btn flex-grow-1" onclick="attachEventListeners('Circle Data', true)"
+                                id="cancel_model_Circle_Data">No, Don't</button>
+                            <button class="modal_btn flex-grow-1" onclick="attachEventListeners('Circle Data')">Enable
+                                for all</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- alert for accesss -->
+        <div class="modal fade" id="alert3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none;">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center mb-1">
+                        <h5 class="mt-1 fs-22 font-weight-500">Enable circle Passport to all</h5>
+                        <p class="mt-1 mb-2 success_notice">Are you sure you want to enable Circle Passport to All
+                            users</p>
+                        <div class="text-center mb-2  mt-3  justify-content-around  flex-nowrap">
+                            <button class="modal_btn flex-grow-1"
+                                onclick="attachEventListeners('Circle Passport', true)"
+                                id="cancel_model_Circle_Passport">No, Don't</button>
+                            <button class="modal_btn flex-grow-1"
+                                onclick="attachEventListeners('Circle Passport')">Enable for all</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
 
         <!-- Circle Access coloumn Header Template -->
         <script id="accessHeader" type="text/x-template">
             <div style="overflow: visible" class="d-flex align-items-center justify-content-center flex-nowrap border-0 gap-10 position-relative">
-                <input type="checkbox" id="headerCheck" onclick="UpdateAllRowCheckboxes"  onchange="UpdateAllRowCheckboxes" />
+                <input type="checkbox" class="pass_sbtn"
+                data-bs-toggle="modal"
+                data-bs-target="#alert"
+                type="button"  id="headerCheck_Circle_Access" />
                 <span>Circle Access</span>
-                <div id="basic-addon2" flow="right" ttip="Enabling Circle Access for all users comes with the added cost.">
+                <div id="basic-addon2" flow="right"  ttip="Enabling Circle Access for all users comes with the added cost.">
                     <svg class="cursor-pointer info" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        </svg>
+                        <path d="M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#5F5F5F"/>
+                    </svg>
                 </div>
             </div>
             
         </script>
-        
-        <script>
-            console.log("sdjkahsjka")
-            function UpdateAllRowCheckboxes(event) {
-                console.log("sdjkahsjka")
-                var checked = event.target.checked; // Get header checkbox state
-                var gridElement = document.querySelector('.e-grid');
-    
-                gridElement.querySelectorAll('.e-row').forEach(function(row) {
-                    var rowCheckbox = row.querySelector('input[type="checkbox"]');
-                    if (rowCheckbox) {
-                        rowCheckbox.checked = checked;
-                    }
-                });
-            }
-            window.onload = function() {
-                function UpdateAllRowCheckboxes(event) {
-                    var checked = event.target.checked; // Get header checkbox state
-                    var gridElement = document.querySelector('.e-grid');
-        
-                    gridElement.querySelectorAll('.e-row').forEach(function(row) {
-                        var rowCheckbox = row.querySelector('input[type="checkbox"]');
-                        if (rowCheckbox) {
-                            rowCheckbox.checked = checked;
-                        }
-                    });
-                }
-            };
-        </script>
-        
-        <!-- Circle Access coloumn Header Template -->
         <!-- Circle Data coloumn Header Template -->
         <script id="circleData" type="text/x-template">
     <div style="" class="d-flex align-items-center justify-content-center flex-nowrap border-0 gap-10 position-relative">
+        <input type="checkbox" class="pass_sbtn"
+        data-bs-toggle="modal"
+        data-bs-target="#alert2"
+        type="button"  id="headerCheck_Circle_Data" />
         <span>Circle Data</span>
         <div id="basic-addon2" flow="right" ttip="Enabling Circle Data for all users comes with the added cost.">
             <svg class="cursor-pointer info" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,12 +184,14 @@ List<object> commands = new List<object>();
         </div>
     </div>
 </script>
-        <!-- Circle Data coloumn Header Template -->
         <!-- Circle Passport coloumn Header Template -->
 
         <script id="passportHeader" type="text/x-template">
     <div style="" class="d-flex align-items-center justify-content-center flex-nowrap border-0 gap-10 position-relative">
-         <input type="checkbox" id="headerCheck" />
+        <input type="checkbox" class="pass_sbtn"
+        data-bs-toggle="modal"
+        data-bs-target="#alert3"
+        type="button"  id="headerCheck_Circle_Passport" />
         <span>Circle Passport</span>
         <div id="basic-addon2" flow="right" ttip="Enabling Circle Passport for all users comes with the added cost.">
             <svg class="cursor-pointer info" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,24 +200,101 @@ List<object> commands = new List<object>();
         </div>
     </div>
 </script>
-        <!-- Circle Passport coloumn Header Template -->
-
         <script>
-            const headerCheckbox = document.getElementById('headerCheck');
-console.log(headerCheckbox)
-            if(headerCheckbox)
-           { headerCheckbox.addEventListener('change', function(event) {
-                const checked = event.target.checked; // Get header checkbox state
-                const gridElement = document.querySelector('.e-grid');
-    
-                // Loop through rows and update individual checkboxes
-                gridElement.querySelectorAll('.e-row').forEach(function(row) {
-                    const rowCheckbox = row.querySelector('input[type="checkbox"]');
-                    if (rowCheckbox) {
-                        rowCheckbox.checked = checked;
-                    }
+
+            function attachEventListeners(columnName, hide) {
+
+                let headerCheckbox;
+                let cancel_model;
+                if (columnName === "Circle Access") {
+                    headerCheckbox = document.getElementById('headerCheck_Circle_Access');
+                    cancel_model = document.getElementById("cancel_model_Circle_Access");
+                } else if (columnName === "Circle Data") {
+                    headerCheckbox = document.getElementById('headerCheck_Circle_Data');
+                    cancel_model = document.getElementById("cancel_model_Circle_Data");
+                } else if (columnName === "Circle Passport") {
+                    headerCheckbox = document.getElementById('headerCheck_Circle_Passport');
+                    cancel_model = document.getElementById("cancel_model_Circle_Passport");
+                }
+
+                const cancelButton = document.querySelector('.e-toolbar-item[title="Cancel"]') || document.querySelector('.e-toolbar-item.e-overlay[title="Cancel"]');
+                if (hide) {
+                    headerCheckbox.checked = false;
+                    hideModal();
+                    return;
+                }
+                cancel_model.addEventListener('click', function () {
+                    headerCheckbox.checked = false;
+                    hideModal();
+                    return;
+                })
+                cancelButton.addEventListener('click', function () {
+                    window.location.reload()
+                })
+                const saveButton = document.querySelector('.e-toolbar-item[title="Update"]') || document.querySelector('.e-toolbar-item.e-overlay[title="Update"]');
+                enableSaveButton(cancelButton, saveButton, true);
+                <!-- console.log( headerCheckbox, cancel_model); -->
+                if (headerCheckbox) {
+                    updateCheckboxes(columnName, true, headerCheckbox);
+                    headerCheckbox.addEventListener('change', function (event) {
+                        const checked = event.target.checked;
+                        updateCheckboxes(columnName, checked, headerCheckbox);
+
+                    });
+
+                    cancel_model.addEventListener('click', function () {
+
+                        cancelChanges(headerCheckbox);
+
+                    });
+                }
+                hideModal();
+            }
+            // hide modals
+            function hideModal() {
+                $('#alert').modal('hide');
+                $('#alert2').modal('hide');
+                $('#alert3').modal('hide');
+
+            }
+            // enable checkboxes   
+            function updateCheckboxes(columnName, checked, headerCheckbox) {
+                headerCheckbox.checked = true;
+                const checkboxes = document.querySelectorAll(`.e-row .e-rowcell[aria-label*="${columnName}"] .e-checkbox-wrapper .e-frame`);
+                checkboxes.forEach(function (checkbox) {
+                    checkbox.classList.add("e-check")
                 });
-            })}
+            }
+            // enable save button of grid toolbar  
+            function enableSaveButton(cancelButton, saveButton, enable) {
+                if (enable) {
+                    saveButton.classList.remove('e-overlay');
+                    saveButton.setAttribute('aria-disabled', 'false');
+                    cancelButton.classList.remove('e-overlay');
+                    cancelButton.setAttribute('aria-disabled', 'false');
+
+                } else {
+                    saveButton.classList.add('e-overlay');
+                    saveButton.setAttribute('aria-disabled', 'true');
+                    cancelButton.classList.add('e-overlay');
+                    cancelButton.setAttribute('aria-disabled', 'true');
+
+                }
+
+            }
+            // disable checkboxes
+            function cancelChanges(headerCheckbox) {
+                headerCheckbox.checked = false;
+                const checkboxes = document.querySelectorAll('.e-row .e-checkbox-wrapper .e-frame');
+                checkboxes.forEach(function (checkbox) {
+                    checkbox.checked = false;
+                    checkbox.classList.remove("e-check");
+                });
+                hideModal();
+            }
+        </script>
+        <script>
+
             function toolbarClick(args) {
                 if (args.item.properties.text === 'Import') {
                     // Trigger file upload functionality
@@ -233,89 +363,109 @@ console.log(headerCheckbox)
             }
         </script>
 
-        <script type="text/javascript">
-            const grid= document.getElementById('GridOverview').ej2_instances[0];
-            grid.addEventListener("columnRender", function (e) {
-                alert("bitch")
-                if (e.detail.column.field === "CirclePassport") {
-                    var template = document.getElementById("passportHeader");
-                    var customElement = createCustomElementFromTemplate(template);
-                    e.detail.element.innerHTML = "";
-                    e.detail.element.appendChild(customElement);
-                    // Add event listeners to customElement's checkbox for row selection
-                }
-            });
-            
-            function createCustomElementFromTemplate(template) {
-                var fragment = document.createDocumentFragment();
-                template.content.cloneNode(true).appendChild(fragment);
-                var customElement = fragment.firstElementChild;
-                // ... initialize custom element based on template content
-                return customElement;
+        <style>
+            input[type=checkbox],
+            input[type=radio] {
+                /* margin: 4px 0 0; */
+                margin-top: 0 !important;
+                line-height: normal;
             }
-            function onCreate(args) {
-                // Sets change event to the header checkbox.
-                $("#headerCheck").ejCheckBox({ "change": "headerChecked" });
-                console.log('1')
-            }
-            // Header checkbox changes function.
-            function headerChecked(args) {
-                checkAll(args.isChecked);
-                console.log('2')
-            }
-            // Grid actionComplete function.
-            function onActionComplete(args) {
-                console.log('3')
-                if (args.requestType == "paging") // Maintain the checked state while paging
-                    checkAll($("#headerCheck").ejCheckBox("model.checked"));
-            }
-            function checkAll(flag) {
-                console.log('4')
-                $(".check").prop("checked", flag); // Check or uncheck all content check boxes            
-            }
-        </script>
+        </style>
 
-        <!-- Using library for parsing imported file  -->
-        <!-- <script>
-    function toolbarClick(args) {
-        if (args.item.properties.text === 'Import') {
-            // Trigger file upload functionality
-            document.getElementById('fileInput').click();
-        } else if (args.item.properties.text === 'Refresh') {
-            var grid = document.getElementById('GridOverview').ej2_instances[0];
-            location.reload();
-            grid.refreshColumns();
-        }
-    }
-    function handleFileUpload() {
-        var fileInput = document.getElementById('fileInput');
-        var file = fileInput.files[0];
-    
-        if (file.name.toLowerCase().endsWith('.csv')) {
-            // Parse CSV file using Papa Parse
-            Papa.parse(file, {
-                header: true,
-                transform: function(value, header) {
-                    if (value.toLowerCase() === 'true') return true;
-                    else if (value.toLowerCase() === 'false') return false;
-                    else return value;
-                },
-                complete: function(results) {
-                    var data = results.data;
-                    updateGrid(data);
-                }
-            });
-        } else {
-            // Display an error message for unsupported file type
-            alert('Please select a CSV file.');
-        }
-    }
-    
-    function updateGrid(data) {
-        console.log(data)
-        var grid = document.getElementById('GridOverview').ej2_instances[0];
-        grid.dataSource = data;
-        grid.refresh();
-    }
-</script> -->
-        <!-- <script src="~/js/csvtojson.js"></script> -->
+        <style>
+            .breadcrumb>li+li:before {
+                content: "";
+            }
+
+            .breadcrumb>li+li:before {
+                content: "";
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            .navbar::before,
+            .container-fluid:after,
+            .container-fluid:before {
+                display: none !important;
+            }
+
+            .modal-header {
+                justify-content: end !important;
+            }
+
+            .close {
+                padding: 2px 10px 2px 10px !important;
+                font-size: 25px;
+            }
+
+            .modal_btn {
+                white-space: nowrap;
+                padding: 10px 20px;
+            }
+
+            .modal_btn:hover {
+                white-space: nowrap;
+                padding: 10px 20px;
+            }
+
+            input[type="checkbox"],
+            input[type="checkbox"]:hover {
+
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 20px;
+                height: 20px;
+                border: 1px rgb(177, 173, 173) solid !important;
+                border-radius: 4px;
+                cursor: pointer;
+                outline: none;
+                background-color: transparent;
+
+            }
+
+            input[type="checkbox"]:checked {
+                background-color: #41b8b6;
+                border: none !important;
+                outline: none;
+            }
+
+            input[type="checkbox"]:focus {
+                border: 1px rgb(177, 173, 173) solid !important;
+
+                outline: none;
+
+            }
+
+
+            input[type="checkbox"]::after {
+                padding-left: 4px;
+                content: "\e718";
+                display: inline-block;
+                font-size: 14px;
+                color: white;
+                visibility: hidden;
+                font-family: e-icons;
+                font-size: 19px;
+                background-color: #41b8b6;
+                border-radius: 4px;
+            }
+
+
+            input[type="checkbox"]:checked::after {
+                visibility: visible;
+                width: 20px;
+                height: 20px;
+            }
+
+            .e-toolbar-item:not(.e-overlay) button::after {
+                background-color: #41b8b6 !important;
+                color: white !important
+            }
+
+            .e-toolbar-item.e-overlay button::after {
+                background-color: inherit;
+            }
+        </style>
