@@ -3,9 +3,10 @@
 <link rel="stylesheet" href="~/css/datagrid.css" />
 <link rel="stylesheet" href="~/css/passport.css" asp-append-version="true" />
 @{
-ViewData["Title"] = "Users";
+ViewData["Title"] = "Emails";
 }
 @using Syncfusion.EJ2
+
 @{
 List<object> commands = new List<object>();
         commands.Add(new { type = "Edit", buttonOption = new { iconCss = "e-icons e-edit", cssClass = "e-flat" } });
@@ -15,7 +16,7 @@ List<object> commands = new List<object>();
         }
 
         @section ControlsSection {
-
+            
         <div style="overflow: visible" class=" users_table_container  mt-lg-4 mt-sm-2 mt-2">
             <section class="wrapper">
 
@@ -35,10 +36,10 @@ List<object> commands = new List<object>();
                         <span>Emails</span>
                     </div>
                     <ejs-grid id="GridOverview" allowSorting="false" allowFiltering="false"
-                        dataSource="@Model.EmailList" toolbar="@(new List<string>() { " Add", "Refresh" , "Cancel"
+                        dataSource="@Model.EmailList" toolbar="@(new List<string>() { "Add", "Refresh" , "Cancel"
                         , "Import" ,"Update"})" toolbarClick="toolbarClick" allowPaging="true" rowHeight="72"
                         enableHover="false" enableHeaderFocus="true" allowSelection="true">
-
+                       
                         <e-grid-editSettings allowAdding="true" allowDeleting="true" allowEditing="true"
                             newRowPosition="Top"></e-grid-editSettings>
                         <e-grid-filterSettings type="Excel" enableInfiniteScrolling="true" loadingIndicator="Spinner"
@@ -99,7 +100,7 @@ List<object> commands = new List<object>();
             </div>
         </div>
         }
-        <!-- alert for accesss -->
+        <!-- alert for data -->
         <div class="modal fade" id="alert2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -125,7 +126,7 @@ List<object> commands = new List<object>();
         </div>
         </div>
 
-        <!-- alert for accesss -->
+        <!-- alert for passport -->
         <div class="modal fade" id="alert3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -151,7 +152,6 @@ List<object> commands = new List<object>();
             </div>
         </div>
         </div>
-
 
         <!-- Circle Access coloumn Header Template -->
         <script id="accessHeader" type="text/x-template">
@@ -200,6 +200,8 @@ List<object> commands = new List<object>();
         </div>
     </div>
 </script>
+
+
         <script>
 
             function attachEventListeners(columnName, hide) {
@@ -221,11 +223,13 @@ List<object> commands = new List<object>();
                 if (hide) {
                     headerCheckbox.checked = false;
                     hideModal();
+                    window.location.reload();
                     return;
                 }
                 cancel_model.addEventListener('click', function () {
                     headerCheckbox.checked = false;
                     hideModal();
+                    window.location.reload();
                     return;
                 })
                 cancelButton.addEventListener('click', function () {
@@ -253,7 +257,8 @@ List<object> commands = new List<object>();
             // hide modals
             function hideModal() {
                 $('#alert').modal('hide');
-                $('#alert2').modal('hide');
+                $('#alert2').modal('hide');xzz                                                                                                                                      
+                
                 $('#alert3').modal('hide');
 
             }
@@ -293,6 +298,7 @@ List<object> commands = new List<object>();
                 hideModal();
             }
         </script>
+    
         <script>
 
             function toolbarClick(args) {
